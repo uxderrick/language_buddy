@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const H1(
-              text: 'Hey, buddyd',
+              text: 'Hey, buddy',
             ),
             const SizedBox(
               height: 24,
