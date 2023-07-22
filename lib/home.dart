@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const H1(
-              text: 'Hey, buddy',
+              text: 'Hey, buddyd',
             ),
             const SizedBox(
               height: 24,
@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               height: 156,
-              color: Colors.amber,
+              // color: Colors.amber,
             ),
           ],
         ),

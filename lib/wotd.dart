@@ -109,12 +109,39 @@ class WordOfTheDay extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Container(
-                              height: 56,
-                              width: 240,
-                              decoration: BoxDecoration(
-                                color: Colors.amber,
-                                borderRadius: BorderRadius.circular(100),
+                            Expanded(
+                              child: Container(
+                                height: 56,
+                                // width: 240,
+                                decoration: BoxDecoration(
+                                    color: const Color(0xFF21005D),
+                                    borderRadius: BorderRadius.circular(100),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Color(0xFF7D48DC),
+                                        spreadRadius: 0,
+                                        blurRadius: 0,
+                                        offset: Offset(
+                                          0,
+                                          5,
+                                        ),
+                                      ),
+                                    ]),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(Icons.library_books),
+                                    const SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text(
+                                      'Learn a new word',
+                                      style: GoogleFonts.grandstander(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                             const SizedBox(
@@ -122,10 +149,24 @@ class WordOfTheDay extends StatelessWidget {
                             ),
                             Container(
                               height: 56,
-                              width: 100,
+                              width: 64,
                               decoration: BoxDecoration(
-                                color: Colors.amber,
-                                borderRadius: BorderRadius.circular(100),
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(100),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Color(0xFF7D48DC),
+                                      spreadRadius: 0,
+                                      blurRadius: 0,
+                                      offset: Offset(
+                                        0,
+                                        5,
+                                      ),
+                                    ),
+                                  ]),
+                              child: const Icon(
+                                Icons.ios_share,
+                                color: Colors.black,
                               ),
                             ),
                           ],
