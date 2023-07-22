@@ -21,62 +21,65 @@ class WordOfTheDay extends StatelessWidget {
                 height: 18,
               ),
               Stack(children: [
-                Container(
-                  height: 320,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: const Color(0xFFD0BCFF),
-                      borderRadius: BorderRadius.circular(32),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0xFFFFD964),
-                          spreadRadius: 0,
-                          blurRadius: 0,
-                          offset: Offset(
-                            0,
-                            8,
+                Positioned.fill(
+                  child: Container(
+                    // height: 500,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: const Color(0xFFD0BCFF),
+                        borderRadius: BorderRadius.circular(32),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0xFFFFD964),
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(
+                              0,
+                              8,
+                            ),
                           ),
-                        ),
-                      ]),
-                  child: Image.asset(
-                    'images/zigzag.png',
-                    scale: 0.9,
-                    alignment: Alignment.bottomRight,
+                        ]),
+                    child: Image.asset(
+                      'images/zigzag.png',
+                      scale: 0.9,
+                      alignment: Alignment.bottomRight,
+                    ),
                   ),
                 ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        const P2(
-                          text: 'Word of the day',
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        Text("Bonjour",
-                            style: GoogleFonts.grandstander(
-                                fontSize: 48,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0xFF200D43))),
-                        const SizedBox(
-                          height: 12,
-                        ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const P2(
+                        text: 'Word of the day',
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                      Text("Bonjour",
+                          style: GoogleFonts.grandstander(
+                              fontSize: 48,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF200D43))),
+                      const SizedBox(
+                        height: 12,
+                      ),
 
-                        //definition card
-                        Container(
-                          width: double.infinity,
-                          height: 96,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
+                      //definition card
+                      Container(
+                        width: double.infinity,
+                        // height: 96,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -88,71 +91,36 @@ class WordOfTheDay extends StatelessWidget {
                                     fontWeight: FontWeight.w500),
                               ),
                               const SizedBox(
-                                height: 4,
+                                height: 8,
                               ),
                               SizedBox(
                                 width: 280,
+                                // height: 400,
                                 child: Text(
                                   'a French greeting used when meeting during the daytime.',
                                   style: GoogleFonts.grandstander(
-                                    color: Colors.black,
+                                    color: const Color(0xFF492B82),
                                     height: 1.5,
                                   ),
                                   textAlign: TextAlign.center,
-                                  maxLines: 2,
+                                  // maxLines: 2,
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                height: 56,
-                                // width: 240,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xFF21005D),
-                                    borderRadius: BorderRadius.circular(100),
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        color: Color(0xFF7D48DC),
-                                        spreadRadius: 0,
-                                        blurRadius: 0,
-                                        offset: Offset(
-                                          0,
-                                          5,
-                                        ),
-                                      ),
-                                    ]),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(Icons.library_books),
-                                    const SizedBox(
-                                      width: 8,
-                                    ),
-                                    Text(
-                                      'Learn a new word',
-                                      style: GoogleFonts.grandstander(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w600),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            Container(
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
                               height: 56,
-                              width: 64,
+                              // width: 240,
                               decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: const Color(0xFF21005D),
                                   borderRadius: BorderRadius.circular(100),
                                   boxShadow: const [
                                     BoxShadow(
@@ -165,15 +133,51 @@ class WordOfTheDay extends StatelessWidget {
                                       ),
                                     ),
                                   ]),
-                              child: const Icon(
-                                Icons.ios_share,
-                                color: Colors.black,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.library_books),
+                                  const SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text(
+                                    'Learn a new word',
+                                    style: GoogleFonts.grandstander(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
                               ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Container(
+                            height: 56,
+                            width: 64,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(100),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0xFF7D48DC),
+                                    spreadRadius: 0,
+                                    blurRadius: 0,
+                                    offset: Offset(
+                                      0,
+                                      5,
+                                    ),
+                                  ),
+                                ]),
+                            child: const Icon(
+                              Icons.ios_share,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 )
               ])
