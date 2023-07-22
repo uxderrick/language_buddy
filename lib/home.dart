@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               height: 156,
-              // color: Colors.amber,
+              color: Colors.amber,
             ),
           ],
         ),

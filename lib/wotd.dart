@@ -39,10 +39,25 @@ class WordOfTheDay extends StatelessWidget {
                             ),
                           ),
                         ]),
-                    child: Image.asset(
-                      'images/zigzag.png',
-                      scale: 0.9,
-                      alignment: Alignment.bottomRight,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 24, top: 28),
+                          //drowdown for languages
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Image.asset(
+                          'images/zigzag.png',
+                          scale: 0.9,
+                          alignment: Alignment.bottomRight,
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -79,7 +94,8 @@ class WordOfTheDay extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 16, horizontal: 24),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -94,8 +110,6 @@ class WordOfTheDay extends StatelessWidget {
                                 height: 8,
                               ),
                               SizedBox(
-                                width: 280,
-                                // height: 400,
                                 child: Text(
                                   'a French greeting used when meeting during the daytime.',
                                   style: GoogleFonts.grandstander(
