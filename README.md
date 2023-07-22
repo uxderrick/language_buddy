@@ -1,6 +1,6 @@
 **Language Buddies: Conversational Translation App**
 
-![Language Buddies]([https://yourimageurl.com](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tzx-femWhPTxvSS9k7_qzg.png))
+![Language Buddies]([https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tzx-femWhPTxvSS9k7_qzg.png]))
 
 Language Buddies is a translation app that redefines the way we approach language translations, making them more intuitive and engaging. Powered by Translation APIs and AI language models, this app seamlessly integrates natural conversation experiences into everyday language interactions.
 
