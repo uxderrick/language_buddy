@@ -33,9 +33,7 @@ Language Buddies is a translation app that redefines the way we approach languag
 
 ## Tech Stack
 
-- React
-- Node.js
-- Express
+- Flutter
 - Translation APIs
 - AI Language Models
 
