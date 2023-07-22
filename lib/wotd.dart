@@ -23,6 +23,7 @@ class WordOfTheDay extends StatelessWidget {
               Stack(children: [
                 Container(
                   height: 320,
+                  width: double.infinity,
                   decoration: BoxDecoration(
                       color: const Color(0xFFD0BCFF),
                       borderRadius: BorderRadius.circular(32),
@@ -37,11 +38,11 @@ class WordOfTheDay extends StatelessWidget {
                           ),
                         ),
                       ]),
-                ),
-                Container(
-                  alignment: Alignment.bottomRight,
-                  height: 278,
-                  child: Image.asset('images/zigzag.png', scale: 0.9),
+                  child: Image.asset(
+                    'images/zigzag.png',
+                    scale: 0.9,
+                    alignment: Alignment.bottomRight,
+                  ),
                 ),
                 Center(
                   child: Padding(
