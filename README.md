@@ -53,6 +53,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Special thanks to all the contributors and testers who have played a pivotal role in shaping Language Buddies into what it is today.
 
----
-
-*Note: The image link needs to be replaced with an actual image URL of the app's logo or screenshot.*
