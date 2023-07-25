@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_buddy/text_styles.dart';
@@ -12,15 +13,6 @@ class WordOfTheDay extends StatefulWidget {
 }
 
 class _WordOfTheDayState extends State<WordOfTheDay> {
-  final List<String> list = [
-    'Item1',
-    'Item2',
-    'Item3',
-    'Item4',
-  ];
-
-  String? selectedValue;
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -179,26 +171,28 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
                           const SizedBox(
                             width: 8,
                           ),
-                          Container(
-                            height: 56,
-                            width: 64,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(100),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Color(0xFF7D48DC),
-                                    spreadRadius: 0,
-                                    blurRadius: 0,
-                                    offset: Offset(
-                                      0,
-                                      5,
+                          GestureDetector(
+                            child: Container(
+                              height: 56,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(100),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Color(0xFF7D48DC),
+                                      spreadRadius: 0,
+                                      blurRadius: 0,
+                                      offset: Offset(
+                                        0,
+                                        5,
+                                      ),
                                     ),
-                                  ),
-                                ]),
-                            child: const Icon(
-                              Icons.ios_share,
-                              color: Colors.black,
+                                  ]),
+                              child: const Icon(
+                                Icons.ios_share,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ],
@@ -214,7 +208,7 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
           alignment: (Alignment.topCenter),
           child: Image.asset('images/sun.png', scale: 0.8),
         ),
-      ],
+      ], 
     );
   }
 }
