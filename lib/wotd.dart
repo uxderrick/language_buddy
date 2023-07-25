@@ -2,10 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_buddy/text_styles.dart';
 
-class WordOfTheDay extends StatelessWidget {
+class WordOfTheDay extends StatefulWidget {
   const WordOfTheDay({
     super.key,
   });
+
+  @override
+  State<WordOfTheDay> createState() => _WordOfTheDayState();
+}
+
+class _WordOfTheDayState extends State<WordOfTheDay> {
+  final List<String> list = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'Item4',
+  ];
+
+  String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +27,6 @@ class WordOfTheDay extends StatelessWidget {
       children: [
         //Container for word of the day
         SizedBox(
-          // height: 296,
-          // color: Colors.amber,
           child: Column(
             children: [
               Container(
@@ -44,14 +56,14 @@ class WordOfTheDay extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 24, top: 28),
-                          //drowdown for languages
-                          child: Container(
-                            height: 40,
-                            width: 40,
-                            color: Colors.black,
-                          ),
-                        ),
+                            padding: const EdgeInsets.only(right: 24, top: 28),
+
+                            //dropdown for languages
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              color: Colors.white,
+                            )),
                         Image.asset(
                           'images/zigzag.png',
                           scale: 0.9,
@@ -68,7 +80,7 @@ class WordOfTheDay extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const SizedBox(
-                        height: 16,
+                        height: 12,
                       ),
                       const P2(
                         text: 'Word of the day',
@@ -78,11 +90,11 @@ class WordOfTheDay extends StatelessWidget {
                       ),
                       Text("Bonjour",
                           style: GoogleFonts.grandstander(
-                              fontSize: 48,
+                              fontSize: 40,
                               fontWeight: FontWeight.w600,
                               color: const Color(0xFF200D43))),
                       const SizedBox(
-                        height: 12,
+                        height: 8,
                       ),
 
                       //definition card
@@ -103,19 +115,19 @@ class WordOfTheDay extends StatelessWidget {
                                 '[ bawn - zhoor ]',
                                 style: GoogleFonts.grandstander(
                                     color: Colors.black,
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w500),
                               ),
                               const SizedBox(
-                                height: 8,
+                                height: 4,
                               ),
                               SizedBox(
                                 child: Text(
-                                  'ad French greeting used when meeting during the daytime.',
+                                  'a French greeting used when meeting during the daytime.',
                                   style: GoogleFonts.grandstander(
-                                    color: const Color(0xFF492B82),
-                                    height: 1.5,
-                                  ),
+                                      color: const Color(0xFF492B82),
+                                      height: 1.5,
+                                      fontSize: 12),
                                   textAlign: TextAlign.center,
                                   // maxLines: 2,
                                 ),
