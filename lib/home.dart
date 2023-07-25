@@ -15,26 +15,26 @@ class Home extends StatelessWidget {
         toolbarHeight: 32,
         backgroundColor: Colors.transparent,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const H1(
+            H1(
               text: 'Hey, buddy',
             ),
-            const SizedBox(
+            SizedBox(
               height: 24,
             ),
-            const WordOfTheDay(),
-            const SizedBox(
+            WordOfTheDay(),
+            SizedBox(
               height: 24,
             ),
-            Container(
-              padding: const EdgeInsets.all(16),
-              height: 156,
-              color: Colors.amber,
-            ),
+            // Container(
+            //   padding: const EdgeInsets.all(16),
+            //   height: 156,
+            //   color: Colors.red,
+            // ),
           ],
         ),
       ),

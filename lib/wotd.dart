@@ -74,7 +74,7 @@ class WordOfTheDay extends StatelessWidget {
                         text: 'Word of the day',
                       ),
                       const SizedBox(
-                        height: 24,
+                        height: 8,
                       ),
                       Text("Bonjour",
                           style: GoogleFonts.grandstander(
@@ -111,7 +111,7 @@ class WordOfTheDay extends StatelessWidget {
                               ),
                               SizedBox(
                                 child: Text(
-                                  'a French greeting used when meeting during the daytime.',
+                                  'ad French greeting used when meeting during the daytime.',
                                   style: GoogleFonts.grandstander(
                                     color: const Color(0xFF492B82),
                                     height: 1.5,
