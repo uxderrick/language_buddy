@@ -208,7 +208,7 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
           alignment: (Alignment.topCenter),
           child: Image.asset('images/sun.png', scale: 0.8),
         ),
-      ], 
+      ],
     );
   }
 }
