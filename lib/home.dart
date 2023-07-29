@@ -31,34 +31,37 @@ class Home extends StatelessWidget {
         )),
 
         //#21005D, #110030
-        child: const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 32,
-                ),
-                H1(
-                  text: 'Hey, buddy',
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                WordOfTheDay(),
-                SizedBox(
-                  height: 24,
-                ),
-                TranslateCTA(),
-                SizedBox(
-                  height: 24,
-                ),
-                StreakCard(),
-                SizedBox(
-                  height: 16,
-                ),
-              ],
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Container(
+            height: double.infinity,
+            child: const SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 32,
+                  ),
+                  H1(
+                    text: 'Hey, buddy',
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  WordOfTheDay(),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  TranslateCTA(),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  StreakCard(),
+                  SizedBox(
+                    height: 32,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

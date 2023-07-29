@@ -11,8 +11,8 @@ class WordOfTheDay extends StatefulWidget {
   State<WordOfTheDay> createState() => _WordOfTheDayState();
 }
 
-String selected = 'A';
-List<String> items = ['A', 'B', 'C', 'D'];
+String selected = '1';
+List<String> items = ['1', '2', '3'];
 
 class _WordOfTheDayState extends State<WordOfTheDay> {
   @override
@@ -50,23 +50,36 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Padding(
-                            padding: const EdgeInsets.only(right: 24, top: 28),
+                          padding: const EdgeInsets.only(right: 24, top: 24),
 
-                            //*dropdown for languages
-                            child: GestureDetector(
-                              onTap: () => showModal(context),
-                              child: Container(
-                                height: 40,
-                                width: 40,
-                                color: Colors.white,
-                                child: Center(
-                                  child: Text(
-                                    selected,
-                                    style: const TextStyle(color: Colors.black),
+                          //!dropdown for languages
+                          child: GestureDetector(
+                            onTap: () => showModal(context),
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    'images/flag$selected.png',
+                                    // fit: BoxFit.fill,
+                                    scale: 0.8,
                                   ),
-                                ),
+                                  const SizedBox(
+                                    width: 4,
+                                  ),
+                                  Image.asset('images/chevron-down.png'),
+                                ],
                               ),
-                            )),
+                              // child: Center(
+                              //   child: Text(
+                              //     selected,
+                              //     style: const TextStyle(color: Colors.black),
+                              //   ),
+                              // ),
+                            ),
+                          ),
+                        ),
                         Image.asset(
                           'images/zigzag.png',
                           scale: 0.9,
@@ -229,11 +242,20 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
         context: context,
         builder: (context) {
           return Container(
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(32),
+                topRight: Radius.circular(32),
+              ),
+            ),
             padding: const EdgeInsets.all(8),
             height: 200,
             alignment: Alignment.center,
             child: ListView.separated(
+                scrollDirection: Axis.horizontal,
                 itemCount: items.length,
+                // ignore: avoid_types_as_parameter_names
                 separatorBuilder: (context, int) {
                   return Divider(
                     color: Colors.white.withOpacity(0.1),
@@ -241,7 +263,14 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
                 },
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                      child: Text(items[index]),
+                      child: Container(
+                        height: 80,
+                        width: 80,
+                        child: Image.asset(
+                          'images/flag${items[index]}.png',
+                          scale: 0.8,
+                        ),
+                      ),
                       onTap: () {
                         setState(() {
                           selected = items[index];
