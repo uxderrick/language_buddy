@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_buddy/text_styles.dart';
@@ -12,6 +11,9 @@ class WordOfTheDay extends StatefulWidget {
   State<WordOfTheDay> createState() => _WordOfTheDayState();
 }
 
+String selected = 'A';
+List<String> items = ['A', 'B', 'C', 'D'];
+
 class _WordOfTheDayState extends State<WordOfTheDay> {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
         SizedBox(
           child: Column(
             children: [
-              Container(
+              const SizedBox(
                 height: 18,
               ),
               Stack(children: [
@@ -50,11 +52,20 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
                         Padding(
                             padding: const EdgeInsets.only(right: 24, top: 28),
 
-                            //dropdown for languages
-                            child: Container(
-                              height: 40,
-                              width: 40,
-                              color: Colors.white,
+                            //*dropdown for languages
+                            child: GestureDetector(
+                              onTap: () => showModal(context),
+                              child: Container(
+                                height: 40,
+                                width: 40,
+                                color: Colors.white,
+                                child: Center(
+                                  child: Text(
+                                    selected,
+                                    style: const TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                              ),
                             )),
                         Image.asset(
                           'images/zigzag.png',
@@ -211,4 +222,36 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
       ],
     );
   }
+
+  void showModal(context) {
+    showModalBottomSheet(
+        // backgroundColor: Colors.white,
+        context: context,
+        builder: (context) {
+          return Container(
+            padding: const EdgeInsets.all(8),
+            height: 200,
+            alignment: Alignment.center,
+            child: ListView.separated(
+                itemCount: items.length,
+                separatorBuilder: (context, int) {
+                  return Divider(
+                    color: Colors.white.withOpacity(0.1),
+                  );
+                },
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                      child: Text(items[index]),
+                      onTap: () {
+                        setState(() {
+                          selected = items[index];
+                        });
+                        Navigator.of(context).pop();
+                      });
+                }),
+          );
+        });
+  }
+
+  //*Country list tile
 }

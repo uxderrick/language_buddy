@@ -11,9 +11,10 @@ class P2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
         style: GoogleFonts.inriaSans(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xFF1F1F1F).withOpacity(0.3)));
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: const Color(0xFF1F1F1F).withOpacity(0.3),
+        ));
   }
 }
 
