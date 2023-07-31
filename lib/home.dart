@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:language_buddy/streak_card.dart';
 import 'package:language_buddy/text_styles.dart';
 import 'package:language_buddy/translate_CTA.dart';
@@ -31,11 +30,11 @@ class Home extends StatelessWidget {
         )),
 
         //#21005D, #110030
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Container(
+        child: const Padding(
+          padding: EdgeInsets.all(16.0),
+          child: SizedBox(
             height: double.infinity,
-            child: const SingleChildScrollView(
+            child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

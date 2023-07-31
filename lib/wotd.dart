@@ -263,7 +263,7 @@ class _WordOfTheDayState extends State<WordOfTheDay> {
                 },
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                      child: Container(
+                      child: SizedBox(
                         height: 80,
                         width: 80,
                         child: Image.asset(
